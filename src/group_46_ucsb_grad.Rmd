@@ -1,0 +1,20 @@
+---
+title: "Group 46 UCSB domestic grad enrollment"
+author: "Eva Wilson & Ali Martin"
+date: "11/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Attach packages:
+library(here)
+library(tidyverse)
+```
+
+```{r}
+# Read in the data:
+ucsb_grad <- read.csv(here("data", "ucsb_grad_data.csv"))
+```
+
