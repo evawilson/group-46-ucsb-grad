@@ -22,6 +22,8 @@ ucsb_grad <- read.csv(here("data", "ucsb_grad_data.csv"))
 ggplot(data = ucsb_grad, 
        aes(x = year_abbr, y = domestic_enrollment)) +
   geom_col(aes(fill = ethnicity, position = "fill")) +
-  labs(x = "Year", y = "Domestic Graduate Enrollment (Count)")
+  labs(x = "Year", y = "Domestic Graduate Enrollment (Count)", title = "Annual Domestic Graduate Enrollment at UCSB by Ethnicity") + theme_minimal()
+  
 ```
 
+**Figure 1** The above figure shows the count of domestic graduate enrollment at UCSB categorized by ethnicity. 
