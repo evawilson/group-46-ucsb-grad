@@ -5,8 +5,8 @@ date: "11/11/2021"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include = FALSE, message = FALSE, warning = FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 
 # Attach packages:
 library(here)
@@ -22,8 +22,9 @@ ucsb_grad <- read.csv(here("data", "ucsb_grad_data.csv"))
 ggplot(data = ucsb_grad, 
        aes(x = year_abbr, y = domestic_enrollment)) +
   geom_col(aes(fill = ethnicity, position = "fill")) +
-  labs(x = "Year", y = "Domestic Graduate Enrollment (Count)", title = "Annual Domestic Graduate Enrollment at UCSB by Ethnicity") + theme_minimal()
-  
+  labs(x = "Year", y = "Domestic Graduate Enrollment (Count)", 
+       title = "Annual Domestic Graduate Enrollment at UCSB by Ethnicity") + 
+  theme_minimal()
 ```
 
 **Figure 1** The above figure shows the count of domestic graduate enrollment at UCSB categorized by ethnicity. 
